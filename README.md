@@ -3,8 +3,8 @@
 Aplikasi mobile berbasis Flutter untuk mencatat daftar tugas atau catatan harian sederhana.
 
 ## Profil 
-**Nama:**    : Harits
-**NIM**     : 607012500069
+- **Nama:**    : Harits
+- **NIM**     : 607012500069
 
 ## Fitur Utama
 
