@@ -18,7 +18,6 @@ class MiniTaskTrackerApp extends StatelessWidget {
   }
 }
 
-// Model data sederhana untuk menyimpan struktur tugas
 class Task {
   String title;
   bool isDone;
@@ -34,11 +33,9 @@ class TaskHomePage extends StatefulWidget {
 }
 
 class _TaskHomePageState extends State<TaskHomePage> {
-  // List untuk menyimpan data tugas di memori lokal
   final List<Task> _tasks = [];
   final TextEditingController _taskController = TextEditingController();
 
-  // Fungsi untuk menambah tugas baru
   void _addTask() {
     if (_taskController.text.trim().isNotEmpty) {
       setState(() {
@@ -48,14 +45,12 @@ class _TaskHomePageState extends State<TaskHomePage> {
     }
   }
 
-  // Fungsi untuk menghapus tugas
   void _deleteTask(int index) {
     setState(() {
       _tasks.removeAt(index);
     });
   }
 
-  // Fungsi untuk mengubah status selesai/belum
   void _toggleTask(int index) {
     setState(() {
       _tasks[index].isDone = !_tasks[index].isDone;
@@ -72,11 +67,14 @@ class _TaskHomePageState extends State<TaskHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Catatan Harian'),
+        backgroundColor: Color(0xFFF54749),
+        title: const Text(
+          'Catatan Harian',
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
       ),
       body: Column(
         children: [
-          // 1. Input Data & Tombol Simpan
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Row(
@@ -86,7 +84,9 @@ class _TaskHomePageState extends State<TaskHomePage> {
                     controller: _taskController,
                     decoration: const InputDecoration(
                       hintText: 'Masukkan tugas/catatan baru...',
-                      border: OutlineInputBorder(),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
                     ),
                   ),
                 ),
@@ -98,14 +98,16 @@ class _TaskHomePageState extends State<TaskHomePage> {
               ],
             ),
           ),
-          // 2. Tampilan Daftar (List) & Aksi Sederhana
           Expanded(
             child: ListView.builder(
               itemCount: _tasks.length,
               itemBuilder: (context, index) {
                 final task = _tasks[index];
                 return Card(
-                  margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                  margin: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 4,
+                  ),
                   child: ListTile(
                     leading: Checkbox(
                       value: task.isDone,

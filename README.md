@@ -1,17 +1,38 @@
-# motion_rek
+# Catatan Harian
 
-A new Flutter project.
+Aplikasi mobile berbasis Flutter untuk mencatat daftar tugas atau catatan harian sederhana.
 
-## Getting Started
+## Profil 
+**Nama:**    : Harits
+**NIM**     : 607012500069
 
-This project is a starting point for a Flutter application.
+## Fitur Utama
 
-A few resources to get you started if this is your first Flutter project:
+- **Input Data:** Menambahkan judul catatan/tugas baru melalui kolom input dan tombol simpan.
+- **Tampilan Daftar (List):** Menampilkan daftar tugas yang telah ditambahkan secara langsung.
+- **Aksi Sederhana:** Menandai tugas sebagai selesai (centang) dan menghapus tugas dari daftar.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Screenshot Aplikasi
+![Screenshot Aplikasi](lib/demo.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Cara Menjalankan Aplikasi
+1. Salin URL repositori berikut:
+   ```text
+   [https://github.com/Haritsdev0981/motion_rek.git](https://github.com/Haritsdev0981/motion_rek.git)
+2. Buka VS Code atau Antigravity IDE, Buka Source Code: pilih Clone Repository -> paste link yang disalin tadi
+3. Setelah masuk buka terminal
+4. Masukkan perintah: flutter pub get
+5. Langkah terakhir jalankan: flutter run
+
+## Deklarasi Penggunaan AI
+Apakah menggunakan AI? Ya
+
+Tool AI yang digunakan: Gemini
+
+Estimasi persentase kontribusi AI: 15%
+
+Bagian kode/fitur yang dibantu AI:
+Membantu penyusunan struktur awal komponen UI dan manajemen state sederhana (setState) pada file lib/main.dart.
+
+Pernyataan:
+"Saya menyatakan bahwa saya memahami alur dan fungsi dari seluruh kode yang ada dalam repositori ini"
